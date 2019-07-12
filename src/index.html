@@ -13,7 +13,66 @@
 
   <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_header.html') %>
 
-  <main></main>
+  <main>
+    <section class="section sectiom-main">
+      <img src="./images/main-installation.png" alt="Пример светопрозрачных конструкций" class="main-installation">
+      <div class="container">
+        <div>
+            <p class="main-title">Строительство</p>
+            <div class="main-subtitle">
+              <span class="bordered">Светопрозрачные конструкции</span>
+              <span class="filled">100% гарантия сроков</span>
+            </div>
+    
+            <ul class="main-list">
+              <li>Офисные перегородки</li>
+              <li>Душевые стеклянные перегородки</li>
+              <li>Фасадные работы</li>
+              <li>Вентелируемые фасады</li>
+            </ul>
+        </div>
+
+        <div class="main-form__wrapper">
+          <form action="" class="main-form">
+            <p class="title">Опишите вашу задачу</p>
+            <p class="subtitle">и получите просчет стоимости объекта</p>
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="Имя">
+            </div>
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="Телефон">
+            </div>
+            <div class="input-wrapper">
+              <textarea  class="textarea" placeholder="Описание" name="" id="" rows="10"></textarea>
+            </div>
+            <div class="input-wrapper">
+              <button type="submit" class="form-button">получить просчет</button>
+            </div>
+            <div class="contact-info">
+              <span>Или задайте вопрос в мессенджер:</span>
+              <ul>
+                <li>
+                  <a href="/">
+                    <img src="./images/icons/telegram.svg" alt="telegram icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <img src="./images/icons/viber.svg" alt="vider icon">
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <img src="./images/icons/whatsup.svg" alt="whatsup icon">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_footer.html') %>
 

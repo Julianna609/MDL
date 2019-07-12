@@ -1,5 +1,70 @@
 @import '../../fonts/mdl-icomoon/style.scss';
 
+@font-face {
+  font-family: "Haettenschweiler";
+  src: url("../../fonts/Haettenschweiler/Haettenschweiler.woff") format("woff"),
+    url("../../fonts/Haettenschweiler/Haettenschweiler.woff2") format("woff2"); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../../fonts/bebasNue/BebasNeueRegular.eot');
+	src: local('../../fonts/bebasNue/Bebas Neue Regular'), local('BebasNeueRegular'),
+		url('../../fonts/bebasNue/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/bebasNue/BebasNeueRegular.woff') format('woff'),
+		url('../../fonts/bebasNue/BebasNeueRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../../fonts/bebasNue/BebasNeueBold.eot');
+	src: local('../../fonts/bebasNue/Bebas Neue Bold'), local('../../fonts/bebasNue/BebasNeueBold'),
+		url('../../fonts/bebasNue/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/bebasNue/BebasNeueBold.woff') format('woff'),
+		url('../../fonts/bebasNue/BebasNeueBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../../fonts/bebasNue/BebasNeueLight.eot');
+	src: local('../../fonts/bebasNue/Bebas Neue Light'), local('../../fonts/bebasNue/BebasNeueLight'),
+		url('../../fonts/bebasNue/BebasNeueLight.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/bebasNue/BebasNeueLight.woff') format('woff'),
+		url('../../fonts/bebasNue/BebasNeueLight.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../../fonts/bebasNue/BebasNeue-Thin.eot');
+	src: local('../../fonts/bebasNue/Bebas Neue Thin'), local('../../fonts/bebasNue/BebasNeue-Thin'),
+		url('../../fonts/bebasNue/BebasNeue-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/bebasNue/BebasNeue-Thin.woff') format('woff'),
+		url('../../fonts/bebasNue/BebasNeue-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Book';
+	src: url('../../fonts/bebasNue/BebasNeueBook.eot');
+	src: local('../../fonts/bebasNue/Bebas Neue Book'), local('../../fonts/bebasNue/BebasNeueBook'),
+		url('../../fonts/bebasNue/BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/bebasNue/BebasNeueBook.woff') format('woff'),
+		url('../../fonts/bebasNue/BebasNeueBook.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 body{
   font-family: $Roboto;
   font-weight: 400;
