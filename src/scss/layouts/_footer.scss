@@ -1,0 +1,109 @@
+.footer{
+  padding: 20px 0;
+  background: $dark;
+  @include bp (mlg){
+    padding: 50px 0 70px;
+  }
+  &>.container{
+    display: flex;
+    flex-wrap: wrap;
+    @include bp (mlg){
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.footer__col{
+  padding: 0;
+  @include bp (mlg){
+    padding: 0 20px;
+  }
+  &.footer__col-1{
+    width: 100%;
+    @include bp (sm){
+      width: 50%;
+    }
+    @include bp (mlg){
+      width: 25%;
+    }
+  }
+  &.footer__col-2{
+    @include bp (sm){
+      width: 50%;
+    }
+    @include bp (mlg){
+      width: 35%;
+    }
+  }
+  &.footer__col-3{
+    @include bp (sm){
+      width: 50%;
+    }
+    @include bp (mlg){
+      width: 20%;
+    }
+  }
+  &.footer__col-4{
+    @include bp (sm){
+      width: 50%;
+    }
+    @include bp (mlg){
+      width: 20%;
+    }
+  }
+}
+
+.footer__logo-wrapper{
+  img{
+    object-fit: contain;
+    width: 140px;
+    @include bp (md){
+      width: 170px;
+    }
+  }
+}
+
+.footer__copuright{
+  font-size: 14px;
+  color: $text-light;
+  margin: 10px 0 0 0;
+  opacity: .7;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.footer__title{
+  color: $text-light;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 300;
+  @include bp (mlg){
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+}
+
+.footer__nav{
+  list-style: none;
+  padding: 0;
+  @include bp (mlg){
+    margin: 10px 0 15px 0;
+  }
+  a{
+    font-weight: 300;
+    font-size: 14px;
+    color: $text-light;
+    opacity: 0.7;
+    &:hover{
+      color: $yellow;
+    }
+  }
+}
+
+.footer__address{
+  font-weight: 300;
+  font-size: 14px;
+  color: $text-light;
+  opacity: 0.7;
+  margin: 0;
+}

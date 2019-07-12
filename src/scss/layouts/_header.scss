@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include bp (mlg){
+      flex-wrap: nowrap;
+    }
   }
 }
 
@@ -17,6 +21,7 @@
   padding-right: 10px;
   img{
     object-fit: contain;
+    width: 100px;
     @include bp (md){
       width: 136px;
     }
@@ -27,8 +32,10 @@
   font-size: 14px;
   line-height: 1.2;
   color: $text-light;
+  display: none;
   @include bp (mlg){
     max-width: 320px;
+    display: block;
   }
   @include bp (xlg){
     max-width: unset;
@@ -119,10 +126,39 @@
   }
 }
 
+.navigation{
+  position: fixed;
+  top: -500%;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  transition: $transition-duration;
+  background: $dark;
+  z-index: 1000;
+  padding: 50px 0 0 0;
+  &.active{
+    top: 0%;
+    left: 0;
+  }
+  @include bp (mlg){
+    position: static;
+    transition: none;
+    min-height: initial;
+    width: initial;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
 .header__navigation{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+  @include bp (mlg){
+    flex-direction: row;
+  }
   .menu-item-has-children{
     position: relative;
     &:hover{
@@ -149,11 +185,18 @@
         right: 10px;
         transform: translate(0, -50%);
         transition: $transition-duration;
+        display: none;
+        @include bp (mlg){
+          display: block;
+        }
       }
     }
   }
   > li{
     position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 0;
     @include bp (mlg){
       padding: 10px;
       font-size: 14px;
@@ -177,6 +220,10 @@
       transform: translate(0, -50%);
       left: 0;
       opacity: .4;
+      display: none;
+      @include bp (mlg){
+        display: block;
+      }
     }
     &:after{
       right: 0;
@@ -208,13 +255,16 @@
 }
 
 .sub-menu{
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 100%;
-  transition: $transition-duration;
+  padding-top: 10px;
+  @include bp (mlg){
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    transition: $transition-duration;
+  }
   &:hover{
     @include bp (mlg){
       opacity: 1;
@@ -230,7 +280,10 @@
       position: relative;
       line-height: 1;
       width: 100%;
-      padding: 10px 20px;
+      width: 5px 20px 5px 0;
+      @include bp (mlg){
+        padding: 10px 20px;
+      }
     }
     &:hover{
       background: $yellow;
@@ -243,6 +296,7 @@
 
 .header__search-form{
   position: relative;
+  width: 200px;
   @include bp (mlg){
     width: 180px;
     padding-left: 10px;
@@ -282,5 +336,54 @@
   [class^="icon-"]{
     font-size: 14px;
     color: $yellow;
+  }
+}
+
+.burger-menu{
+  width: 30px;
+  z-index: 1001;
+  span{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: $transition-duration;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      top: -7px;
+      left: 0;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      bottom: -7px;
+      left: 0;
+    }
+  }
+  &.active{
+    span{
+      background: $yellow;
+      transform: rotate(-39deg);
+      &::before{
+        background: $yellow;
+        transform: rotate(80deg);
+        top: 0;
+      }
+      &::after{
+        background: $yellow;
+        opacity: 0;
+      }
+    }
+  }
+  @include bp (mlg){
+    display: none;
   }
 }
