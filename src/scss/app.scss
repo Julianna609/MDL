@@ -1,0 +1,25 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+// Import abstract
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+// reset styles
+@import './base/reset.scss';
+
+// Import base
+@import './base/fonts';
+@import './base/animations';
+
+// Import layouts
+@import './layouts/header';
+@import './layouts/footer';
+
+// Import components
+
+// Import pages

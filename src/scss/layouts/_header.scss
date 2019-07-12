@@ -1,0 +1,286 @@
+.header__first-row,
+.header__second-row{
+  padding: 10px 0;
+  background: $dark;
+  &>.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header__second-row{
+  background: #161616;
+}
+
+.header__logo-wrapper{
+  padding-right: 10px;
+  img{
+    object-fit: contain;
+    @include bp (md){
+      width: 136px;
+    }
+  }
+}
+
+.header__description{
+  font-size: 14px;
+  line-height: 1.2;
+  color: $text-light;
+  @include bp (mlg){
+    max-width: 320px;
+  }
+  @include bp (xlg){
+    max-width: unset;
+  }
+  p{
+    margin: 0;
+  }
+}
+
+.header__phones{
+  padding: 0 10px;
+  margin: 0;
+  list-style: none;
+  a{
+    text-decoration: none;
+    color: $text-light;
+    font-size: 12px;
+    &:active{
+      color: $yellow;
+    }
+    &:visited{
+      color: $text-light;
+    }
+    @include bp (mlg){
+      &:hover{
+        cursor: default;
+        color: $text-light;
+      }
+    }
+  }
+}
+
+.header__social-contacts{
+  a{
+    color: $yellow;
+    font-size: 12px;
+  }
+}
+
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    text-decoration: none;
+    outline: none;
+    display: block;
+    padding: 0 4px;
+    [class^="icon-"]{
+      transition: $transition-duration;
+      font-size: 11px;
+      &:before{
+        color: $yellow;
+      }
+    }
+    &:hover{
+      [class^="icon-"]{
+        &:before{
+          color: $text-light;
+        }
+      }
+    }
+  }
+}
+
+.header__button{
+  padding-left: 10px;
+  @include bp (mlg){
+    width: 170px;
+  }
+}
+
+.bordered-button{
+  text-decoration: none;
+  outline: none;
+  color: $text-light;
+  background: transparent;
+  display: block;
+  box-shadow: none;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid $yellow;
+  font-size: 12px;
+  text-align: center;
+  transition: $transition-duration;
+  &:hover{
+    background: $yellow;
+  }
+}
+
+.header__navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .menu-item-has-children{
+    position: relative;
+    &:hover{
+      > a{
+        &:after{
+          transform: translate(0, -50%) rotate(180deg);
+        }
+      }
+      @include bp (mlg){
+        &>.sub-menu{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    > a{
+      &:after{
+        content: "\e90c";
+        color: $yellow;
+        font-family: "mdl-icomoon";
+        font-size: 5px;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 10px;
+        transform: translate(0, -50%);
+        transition: $transition-duration;
+      }
+    }
+  }
+  > li{
+    position: relative;
+    @include bp (mlg){
+      padding: 10px;
+      font-size: 14px;
+    }
+    @include bp (xlg){
+      font-size: 12px;
+      padding: 10px 20px;
+    }
+    @include bp (xxlg){
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 1px;
+      background: $text-light;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+      opacity: .4;
+    }
+    &:after{
+      right: 0;
+      left: initial;
+    }
+    &:first-child{
+      padding-left: 0;
+      &:before{
+        display: none;
+      }
+    }
+    &:last-child{
+      padding-right: 0;
+      &:after{
+        display: none;
+      }
+    }
+    > a{
+      display: block;
+      color: $text-light;
+      text-transform: uppercase;
+      line-height: 1;
+      transition: $transition-duration;
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.sub-menu{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  transition: $transition-duration;
+  &:hover{
+    @include bp (mlg){
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  li{
+    background: #161616;
+    transition: $transition-duration;
+    a{
+      display: block;
+      color: $text-light;
+      position: relative;
+      line-height: 1;
+      width: 100%;
+      padding: 10px 20px;
+    }
+    &:hover{
+      background: $yellow;
+      a{
+        color: $text-light;
+      }
+    }
+  }
+}
+
+.header__search-form{
+  position: relative;
+  @include bp (mlg){
+    width: 180px;
+    padding-left: 10px;
+  }
+  @include bp (xlg){
+    width: 195px;
+  }
+  @include bp (xxlg){
+    width: 215px;
+  }
+}
+
+.header__search-form-field{
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.411);
+  font-size: 12px;
+  line-height: 1;
+  padding: 10px;
+  background: transparent;
+  &::placeholder{
+    color: $text-light;
+    font-size: 12px;
+  }
+}
+
+.header__search-form-submit{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  [class^="icon-"]{
+    font-size: 14px;
+    color: $yellow;
+  }
+}

@@ -1,0 +1,227 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fb6me9');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fb6me9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?fb6me9') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?fb6me9') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?fb6me9##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Arrow-next-small {
+  &:before {
+    content: $icon-Arrow-next-small; 
+  }
+}
+.icon-Arrow-prev {
+  &:before {
+    content: $icon-Arrow-prev; 
+  }
+}
+.icon-aside-chat .path1 {
+  &:before {
+    content: $icon-aside-chat-path1;  
+    color: rgb(26, 26, 26);
+  }
+}
+.icon-aside-chat .path2 {
+  &:before {
+    content: $icon-aside-chat-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 215, 0);
+  }
+}
+.icon-aside-chat .path3 {
+  &:before {
+    content: $icon-aside-chat-path3;  
+    margin-left: -1em;  
+    color: rgb(255, 215, 0);
+  }
+}
+.icon-aside-chat-close .path1 {
+  &:before {
+    content: $icon-aside-chat-close-path1;  
+    color: rgb(255, 215, 0);
+  }
+}
+.icon-aside-chat-close .path2 {
+  &:before {
+    content: $icon-aside-chat-close-path2;  
+    margin-left: -1em;  
+    color: rgb(26, 26, 26);
+  }
+}
+.icon-aside-chat-hover .path1 {
+  &:before {
+    content: $icon-aside-chat-hover-path1;  
+    color: rgb(255, 215, 0);
+  }
+}
+.icon-aside-chat-hover .path2 {
+  &:before {
+    content: $icon-aside-chat-hover-path2;  
+    margin-left: -1em;  
+    color: rgb(26, 26, 26);
+  }
+}
+.icon-aside-chat-hover .path3 {
+  &:before {
+    content: $icon-aside-chat-hover-path3;  
+    margin-left: -1em;  
+    color: rgb(26, 26, 26);
+  }
+}
+.icon-cancel {
+  &:before {
+    content: $icon-cancel;     
+    color: #ffd700;
+  }
+}
+.icon-check-symbol {
+  &:before {
+    content: $icon-check-symbol; 
+  }
+}
+.icon-dropdown {
+  &:before {
+    content: $icon-dropdown;     
+    color: #ffd700;
+  }
+}
+.icon-fb {
+  &:before {
+    content: $icon-fb;     
+    color: #ffd700;
+  }
+}
+.icon-inst {
+  &:before {
+    content: $icon-inst;     
+    color: #ffd700;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;     
+    color: #ffd700;
+  }
+}
+.icon-telegram .path1 {
+  &:before {
+    content: $icon-telegram-path1;  
+    color: rgb(0, 136, 204);
+  }
+}
+.icon-telegram .path2 {
+  &:before {
+    content: $icon-telegram-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-telegram-transparent {
+  &:before {
+    content: $icon-telegram-transparent; 
+  }
+}
+.icon-twit {
+  &:before {
+    content: $icon-twit;     
+    color: #ffd700;
+  }
+}
+.icon-viber .path1 {
+  &:before {
+    content: $icon-viber-path1;  
+    color: rgb(89, 38, 124);
+  }
+}
+.icon-viber .path2 {
+  &:before {
+    content: $icon-viber-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-viber .path3 {
+  &:before {
+    content: $icon-viber-path3;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-viber .path4 {
+  &:before {
+    content: $icon-viber-path4;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-viber .path5 {
+  &:before {
+    content: $icon-viber-path5;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-viber .path6 {
+  &:before {
+    content: $icon-viber-path6;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-viber-transparent {
+  &:before {
+    content: $icon-viber-transparent; 
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk;     
+    color: #ffd700;
+  }
+}
+.icon-whatsup .path1 {
+  &:before {
+    content: $icon-whatsup-path1;  
+    color: rgb(18, 140, 126);
+  }
+}
+.icon-whatsup .path2 {
+  &:before {
+    content: $icon-whatsup-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-whatsup-transparent {
+  &:before {
+    content: $icon-whatsup-transparent; 
+  }
+}
+.icon-yt {
+  &:before {
+    content: $icon-yt;     
+    color: #ffd700;
+  }
+}
+
