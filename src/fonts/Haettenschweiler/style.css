@@ -1,0 +1,9 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Haettenschweiler";
+
+  src: url("./fonts/Haettenschweiler.woff") format("woff"), /* Modern Browsers */
+    url("./fonts/Haettenschweiler.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

@@ -6,8 +6,7 @@ const { htmlPlugins } = require('./utils');
 module.exports = {
   entry: {
     libs: ['./src/js/libs.js', './src/scss/libs.scss'],
-    app: ['./src/js/app.js', './src/scss/app.scss'],
-    bundleslideout: ['./src/js/bundle-slideout.js']
+    app: ['./src/js/app.js', './src/scss/app.scss']
   },
   output: {
     path: path.resolve(__dirname, '../dist'),

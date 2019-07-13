@@ -1,0 +1,109 @@
+.section{
+  font-family: $Roboto;
+  position: relative;
+  @include bp (mlg){
+    padding: 50px 0;
+    background: #fff;
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.sectiom-main{
+  &>.container{
+    position: relative;
+    z-index: 1;
+    @include bp (mlg){
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  .main-title{
+    text-transform: uppercase;
+    color: $dark;
+    font-family: "Haettenschweiler";
+    margin-bottom: 15px;
+    @include bp (md){
+      font-size: 80px;
+      line-height: 1;
+    }
+    @include bp (mlg){
+      font-size: 105px;
+    }
+  }
+
+  .main-subtitle{
+    display: flex;
+    align-items: stretch;
+    text-transform: uppercase;
+    color: $dark;
+    span{
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      padding: 5px 10px;
+    }
+    .bordered{
+      font-family: 'Bebas Neue';
+      font-weight: normal;
+      border: 2px solid $yellow;
+      font-size: 20px;
+      @include bp (mlg){
+        font-size: 26px;
+      }
+    }
+    .filled{
+      font-weight: 700;
+      background: $yellow;
+      font-size: 16px;
+      @include bp (mlg){
+        font-size: 18px;
+      }
+    }
+  }
+
+  .main-list{
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0;
+    margin: 20px 0 0 0;
+    @include bp (mlg){
+      max-width: 320px;
+      font-size: 18px;
+      margin: 50px 0 0 0;
+    }
+    li{
+      position: relative;
+      padding: 7px 0 7px 35px;
+      &:after{
+        content: "\e90b";
+        color: $text-dark;
+        font-size: 18px;
+        font-family: "mdl-icomoon";
+        position: absolute;
+        top: 6px;
+        left: 4px;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        background: $yellow;
+      }
+    }
+  }
+}
+
+.main-installation{
+  position: absolute;
+  z-index: 0;
+  max-width: 590px;
+  width: 60%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  object-fit: contain;
+}

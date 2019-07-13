@@ -1,0 +1,108 @@
+.user-contact-widget{
+  position: fixed;
+  z-index: 10;
+  left: 20px;
+  bottom: 20px;
+  @include bp (mlg){
+    left: 100px;
+    bottom: 50px;
+  }
+  @include bp (sm){
+    left: 50px;
+  }
+  &.opened {
+    .user-contact-widget__menu{
+      bottom: 100%;
+      opacity: 1;
+    }
+
+    .user-contact-widget__icon{
+      background: $yellow;
+      cursor: pointer;
+  
+      &:before {
+        content: "\e90a";
+        color: $dark;
+        font-size: 18px;
+        @include bp (sm){
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .user-contact-widget__icon{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $dark;
+    transition: $transition-duration;
+    padding: 10px;
+    @include bp (sm){
+      width: 60px;
+      height: 60px;
+    }
+
+    &:before{
+      content: "\e902";
+      color: $yellow;
+      font-size: 25px;
+      font-family: 'mdl-icomoon';
+      @include bp (sm){
+        font-size: 40px;
+      }
+    }
+
+    &:hover{
+      background: $yellow;
+      cursor: pointer;
+
+      &:before{
+        color: $dark;
+      }
+    }
+  }
+
+  .user-contact-widget__menu{
+    position: absolute;
+    bottom: -100vh;
+    opacity: 0;
+    transition: $transition-duration;
+    left: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      border: 1px solid $dark;
+      background: #fff;
+      margin: 0 auto 10px;
+      @include bp (sm){
+        width: 40px;
+        height: 40px;
+      }
+
+      [class^="icon-"]{
+        font-size: 20px;
+        color: $dark;
+        @include bp (sm){
+          font-size: 20px;
+        }
+      }
+
+      &:hover{
+        border: 1px solid $yellow;
+
+        [class^="icon-"] {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}

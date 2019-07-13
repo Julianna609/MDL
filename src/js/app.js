@@ -9,12 +9,12 @@
 /**
  * Import utils
  */
-import { log } from './utils'
+import { log } from './utils';
 
 /**
  * jQuery code
  */
-;($ => {
+($ => {
   $(document).ready(function () {
     log('Ready');
 
@@ -23,6 +23,10 @@ import { log } from './utils'
       $(this).toggleClass('active');
       $('.js-menu').toggleClass('active');
       $('body').toggleClass('overflow-hidden');
+    });
+
+    $('.js-contact-widget').click(function () {
+      $(this).toggleClass('opened');
     });
   });
 })(window.jQuery);
