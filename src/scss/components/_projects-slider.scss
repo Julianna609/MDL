@@ -1,0 +1,62 @@
+.projects-slider{
+  .slide{
+    padding: 0 20px;
+    .img-wrapper{
+      max-height: 315px;
+      position: relative;
+      img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+      .tag{
+        position: absolute;
+        right: 0;
+        top: 30px;
+        padding: 15px;
+        background: $blue;
+        color: $text-light;
+        font-size: 14px;
+        line-height: 1;
+        margin: 0;
+      }
+    }
+
+    .content{
+      padding: 20px;
+      background: $dark;
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.45);
+      @include bp (mlg){
+        padding: 30px;
+      }
+
+      .title{
+        font-size: 22px;
+        color: $text-light;
+        margin-bottom: 20px;
+      }
+
+      .details{
+        margin: 20px 0;
+        padding: 0;
+        li{
+          color: $text-light;
+          display: flex;
+          span{
+            display: block;
+            &:first-child{
+              font-weight: 700;
+              font-size: 16px;
+              width: 100px;
+            }
+            &:last-child{
+              font-weight: 300;
+              font-size: 14px;
+              width: calc(100% - 100px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

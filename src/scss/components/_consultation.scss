@@ -1,0 +1,72 @@
+.section.consultation{
+  background: $yellow;
+  padding: 30px 0;
+  >.container{
+    @include bp (md){
+      display: flex;
+      align-items: center;
+    }
+  }
+  p{
+    opacity: 0.7;
+    color: $text-dark;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .consultatioin__title {
+    font-family: Haettenschweiler;
+    color: $dark;
+    letter-spacing: 0.04em;
+    font-size: 32px;
+    opacity: 1;
+
+    @include bp (mlg) {
+      font-size: 40px;
+    }
+  }
+}
+
+.consultation__text-wrapper{
+  width: 100%;
+  @include bp (md){
+    width: 35%;
+  }
+}
+
+.consultation__image{
+  display: none;
+  @include bp (md) {
+    display: block;
+    width: 30%;
+  }
+
+  img{
+    max-width: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include bp (mlg){
+      max-width: 300px;
+    }
+  }
+}
+
+.consultation__form{
+  width: 100%;
+  @include bp (md) {
+    width: 35%;
+  }
+
+  .main-form{
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    .input,
+    .textarea{
+      border: none;
+      background: #fff;
+    }
+  }
+}

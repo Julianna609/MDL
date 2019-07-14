@@ -15,6 +15,11 @@
 
 .footer__col{
   padding: 0;
+  @include bp (xs){
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+  }
   @include bp (mlg){
     padding: 0 20px;
   }
@@ -49,6 +54,9 @@
     }
     @include bp (mlg){
       width: 20%;
+    }
+    @include bp (xs) {
+      width: 100%;
     }
   }
 }
