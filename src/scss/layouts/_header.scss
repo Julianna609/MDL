@@ -31,7 +31,6 @@
 .header__description{
   font-size: 14px;
   line-height: 1.2;
-  color: $text-light;
   display: none;
   @include bp (mlg){
     max-width: 320px;
@@ -41,6 +40,7 @@
     max-width: unset;
   }
   p{
+    color: $text-light;
     margin: 0;
   }
 }

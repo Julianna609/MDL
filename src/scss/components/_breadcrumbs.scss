@@ -1,0 +1,47 @@
+.breadcrums {
+  padding: 10px 0px;
+  border-bottom: 1px solid #e1e1e1;
+
+  a {
+    font-weight: 400;
+    font-size: 12px;
+    color: $text-dark;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+
+    &:after {
+      content: '/';
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $text-dark;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:active,
+    &:visited {
+      color: $text-dark;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+
+    &.active {
+      color: $blue;
+    }
+  }
+}

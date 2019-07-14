@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MDL</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_header.html') %>
+
+  <main>
+    <div class="container">
+      <div class="breadcrums">
+        <a href="/">Главная</a>
+        <a href="" class="active">Отзывы</a>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h4 class="page-title">Отзывы</h4>
+
+        <div class="review-item">
+          <div class="review-item__img-wrapper">
+            <img src="./images/review/1.png" alt="">
+          </div>
+          <div class="review-item__content">
+            <p class="review-item__title">Каркасный дом</p>
+            <div class="review-item__reviewer">
+              <div class="review-item__person">
+                <img src="./images/review/1.1.png" alt="">
+                <p>Евгений Курчатовцев</p>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem explicabo voluptas
+                ipsam, assumenda atque excepturi fugiat cupiditate ex, amet quasi, accusamus recusandae voluptatibus
+                consequuntur adipisci accusantium.</p>
+            </div>
+            <div class="review-item__signature">
+              <span class="position">Директор компании “CPU New”</span>
+              <span class="signature"></span>
+              <a href="/" class="bordered-button view-btn">Просмотреть документ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_footer.html') %>
+
+</body>
+
+</html>
