@@ -71,10 +71,7 @@ import { log } from './utils';
         $('.reviews .review-item').slice(0, 3).css('display', 'flex');
         $('.js-more-review').on('click', function (e) {
           e.preventDefault();
-          $('div:hidden').slice(0, 4).css('display', 'flex');
-          if ($('div:hidden').length === 0) {
-            $('#load').fadeOut('slow');
-          }
+          $('.reviews .review-item:hidden').slice(0, 4).css('display', 'flex');
         });
       } else {
         $('.reviews .review-item').css('display', 'flex');
