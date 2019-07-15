@@ -2,8 +2,8 @@
   font-family: Bebas Neue;
   text-transform: uppercase;
   color: $text-dark;
-  margin: 0 0 30px;
-  font-size: 70px;
+  margin: 0 0 20px;
+  font-size: 50px;
   line-height: 1;
   @include bp (mlg){
     margin: 0 0 50px;
@@ -16,9 +16,10 @@
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 30px 0;
   position: relative;
   z-index: 1;
+  display: none;
   &:after {
     content: '';
     position: absolute;
@@ -39,7 +40,7 @@
     flex-direction: row;
   }
   @include bp (mlg){
-    padding: 35px 0;
+    padding: 40px 0;
   }
 }
 
@@ -89,12 +90,12 @@
   display: flex;
   align-items: center;
 
-  .description{
-    padding-left: 20px;
-    width: 100%;
-    @include bp (md){
-      width: calc(100% - 170px);
-    }
+}
+.review-item__description{
+  padding-left: 20px;
+  width: 100%;
+  @include bp (md){
+    width: calc(100% - 170px);
   }
 }
 
@@ -157,5 +158,54 @@
       max-width: 270px;
       margin: 0;
     }
+  }
+}
+
+.morecontent span {
+  display: none;
+}
+
+.show-more-button{
+  font-size: 14px;
+  font-weight: 700;
+  color: $text-dark;
+  display: flex;
+  padding-top: 15px;
+  outline: none;
+  &:link,
+  &:focus,
+  &:visited,
+  &:active,
+  &:hover{
+    text-decoration: none;
+    color: $text-dark;
+    outline: none;
+    border: none;
+  }
+  &:hover{
+    color: $yellow-hover;
+  }
+}
+
+.review__see-more{
+  display: block;
+  max-width: 230px;
+  margin: 30px auto;
+  border: 2px solid #EBEBEB;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 15px;
+  color: $text-dark;
+  transition: $transition-duration;
+  @include bp (md){
+    margin: 100px auto;
+  }
+  &:hover{
+    text-decoration: none;
+    outline: none;
+    border-color: $yellow;
+    color: $yellow;
   }
 }
