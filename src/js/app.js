@@ -18,6 +18,9 @@ import { log } from './utils';
   $(document).ready(function () {
     log('Ready');
 
+    let Popup = window.Popup;
+    new Popup();
+
     // burger menu opening
     $('.js-burger-menu').click(function () {
       $(this).toggleClass('active');
@@ -32,7 +35,7 @@ import { log } from './utils';
     // product descriptions accordion
 
     const initDescriptionAccodrion = () => {
-      const showChar = $('window').width() > 991 ? 320 : 190;// How many characters are shown by default
+      const showChar = $('window').width() > 991 ? 320 : 190; // How many characters are shown by default
       $('.js-review-description').each(function () {
         const content = $(this).html();
 
@@ -45,7 +48,8 @@ import { log } from './utils';
           $(this).html(html);
         }
       });
-    }; initDescriptionAccodrion();
+    };
+    initDescriptionAccodrion();
 
     $('.js-see-more').click(function (e) {
       e.preventDefault();
@@ -58,8 +62,11 @@ import { log } from './utils';
       } else {
         $this.addClass('less');
         $this.html(lesstext);
-      };
-      $this.parent().prev().css('display', 'inline');
+      }
+      $this
+        .parent()
+        .prev()
+        .css('display', 'inline');
       $this.prev().toggle();
     });
 
@@ -68,14 +75,34 @@ import { log } from './utils';
       if ($('.reviews .review-item').length > 3) {
         $('.reviews .container').append(`<a href="/" class="review__see-more js-more-review">Показать еще отзывы</a>`);
 
-        $('.reviews .review-item').slice(0, 3).css('display', 'flex');
+        $('.reviews .review-item')
+          .slice(0, 3)
+          .css('display', 'flex');
         $('.js-more-review').on('click', function (e) {
           e.preventDefault();
-          $('.reviews .review-item:hidden').slice(0, 4).css('display', 'flex');
+          $('.reviews .review-item:hidden')
+            .slice(0, 4)
+            .css('display', 'flex');
         });
       } else {
         $('.reviews .review-item').css('display', 'flex');
       }
-    } reviewsLoad();
+    }
+    reviewsLoad();
+
+    $('#comeback-trigger').mouseover(function () {
+      if (typeof window.Cookies.get('exit') === 'undefined') {
+        $.magnificPopup.open(
+          {
+            items: {
+              src: '#comeback'
+            },
+            type: 'inline'
+          },
+          0
+        );
+        window.Cookies.set('exit', 1, { expires: 1 });
+      }
+    });
   });
 })(window.jQuery);

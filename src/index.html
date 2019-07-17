@@ -489,19 +489,7 @@
 
   <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_footer.html') %>
 
-  <div class="helper">
-    <div class="container">
-      <form class="helper-form">
-        <p>Мы поможем с Вашим проектом!</p>
-        <input type="text" class="input" placeholder="Телефон">
-        <input type="text" class="input" placeholder="Что нужно сделать?">
-        <button type="submit" class="form-button">получить консультацию</button>
-      </form>
-    </div>
-    <div class="close">
-      <span class="icon-cancel"></span>
-    </div>
-  </div>
+  <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_helper.html') %>
 
 </body>
 
