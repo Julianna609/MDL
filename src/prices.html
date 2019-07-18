@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MDL</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_header.html') %>
+
+  <main>
+
+    <div class="container">
+      <div class="breadcrums">
+        <a href="/">Главная</a>
+        <a href="/">Услуги</a>
+        <a href="/">Светопрозрачные фасады</a>
+        <a href="" class="active">Цены</a>
+      </div>
+    </div>
+
+   <section class="section main-common-section price">
+     <div class="container">
+       <div class="main-titles-wrapper">
+         <p class="main-title">Цены</p>
+          <p class="main-subtitle">Мы акцентируем Ваше внимание на то, что каждый проект индивидуален и обсудив с
+             менеджером компании MDL Вы
+             сможете получить более выгодную и точную цену</p>
+       </div>
+
+       <div class="main-form__wrapper">
+         <form action="" class="main-form">
+           <p class="title">Опишите вашу задачу</p>
+           <p class="subtitle">и получите просчет стоимости объекта</p>
+           <div class="input-wrapper">
+             <input class="input" type="text" placeholder="Имя">
+           </div>
+           <div class="input-wrapper">
+             <input class="input" type="text" placeholder="Телефон">
+           </div>
+           <div class="input-wrapper">
+             <textarea class="textarea" placeholder="Описание" name="" id="" rows="10"></textarea>
+           </div>
+           <div class="input-wrapper">
+             <button type="submit" class="form-button">получить просчет</button>
+           </div>
+           <div class="contact-info">
+             <span>Или задайте вопрос в мессенджер:</span>
+             <ul>
+               <li>
+                 <a href="/">
+                   <img src="./images/icons/telegram.svg" alt="telegram icon">
+                 </a>
+               </li>
+               <li>
+                 <a href="/">
+                   <img src="./images/icons/viber.svg" alt="vider icon">
+                 </a>
+               </li>
+               <li>
+                 <a href="/">
+                   <img src="./images/icons/whatsup.svg" alt="whatsup icon">
+                 </a>
+               </li>
+             </ul>
+           </div>
+         </form>
+       </div>
+     </div>
+   </section>
+
+   <section class="section">
+    <div class="container">
+    
+      <ul class="tabs">
+        <li class="tab-link current" data-tab="tab-1">Получить просчет</li>
+        <li class="tab-link" data-tab="tab-2">Получить просчет</li>
+      </ul>
+    
+      <div id="tab-1" class="tab-content current">
+        <h4 class="section-title">Виды работ</h4>
+
+        <div class="price-item">
+          <div class="price-item__image">
+            <div class="image">
+              <img src="./images/prices/sample.png" alt="">
+            </div>
+          </div>
+          <div class="price-item__inform">
+            <p class="title">Светопрозрачные фасады</p>
+            <p>Светопрозрачные фасады кардинально меняют облик здания. Использование стекла в облике здания в первую
+              очередь это показатель статуса, индикатор вкуса и демонстрация престижа компании.</p>
+          </div>
+          <div class="price-item__price">
+            <p>Цена от: <strong>3000 грн</strong></p>
+            <a href="/" class="bordered-button">Получить просчет</a>
+          </div>
+        </div>
+
+         <div class="price-item">
+           <div class="price-item__image">
+             <div class="image">
+               <img src="./images/prices/sample.png" alt="">
+             </div>
+           </div>
+           <div class="price-item__inform">
+             <p class="title">Светопрозрачные фасады</p>
+             <p>Светопрозрачные фасады кардинально меняют облик здания. Использование стекла в облике здания в первую
+               очередь это показатель статуса, индикатор вкуса и демонстрация престижа компании.</p>
+           </div>
+           <div class="price-item__price">
+             <p>Цена от: <strong>3000 грн</strong></p>
+             <a href="/" class="bordered-button">Получить просчет</a>
+           </div>
+         </div>
+
+          <div class="price-item">
+            <div class="price-item__image">
+              <div class="image">
+                <img src="./images/prices/sample.png" alt="">
+              </div>
+            </div>
+            <div class="price-item__inform">
+              <p class="title">Светопрозрачные фасады</p>
+              <p>Светопрозрачные фасады кардинально меняют облик здания. Использование стекла в облике здания в первую
+                очередь это показатель статуса, индикатор вкуса и демонстрация престижа компании.</p>
+            </div>
+            <div class="price-item__price">
+              <p>Цена от: <strong>3000 грн</strong></p>
+              <a href="/" class="bordered-button">Получить просчет</a>
+            </div>
+          </div>
+
+           <div class="price-item">
+             <div class="price-item__image">
+               <div class="image">
+                 <img src="./images/prices/sample.png" alt="">
+               </div>
+             </div>
+             <div class="price-item__inform">
+               <p class="title">Светопрозрачные фасады</p>
+               <p>Светопрозрачные фасады кардинально меняют облик здания. Использование стекла в облике здания в первую
+                 очередь это показатель статуса, индикатор вкуса и демонстрация престижа компании.</p>
+             </div>
+             <div class="price-item__price">
+               <p>Цена от: <strong>3000 грн</strong></p>
+               <a href="/" class="bordered-button">Получить просчет</a>
+             </div>
+           </div>
+      </div>
+
+      <div id="tab-2" class="tab-content">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    
+      </div><!-- container -->
+   </section>
+  </main>
+
+  <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_consultation.html') %>
+
+  <section class="section">
+    <div class="container">
+      <h4 class="section-title">СЕО Текст</h4>
+      <div class="seo-text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nesciunt quisquam dignissimos voluptas repellendus corporis ad voluptatem consequuntur necessitatibus assumenda tenetur id quis eveniet sapiente modi dicta recusandae sequi est, magni velit dolor! Pariatur quae provident, vel dignissimos error aliquam suscipit fuga inventore eveniet culpa quasi hic dolor est, eius exercitationem nisi placeat facere voluptates optio sequi veritatis. Eaque, rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus hic at iusto odit quam quis id laborum quaerat, commodi fugiat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nesciunt quisquam dignissimos voluptas
+          repellendus corporis ad voluptatem consequuntur necessitatibus assumenda tenetur id quis eveniet sapiente modi
+          dicta recusandae sequi est, magni velit dolor! Pariatur quae provident, vel dignissimos error aliquam suscipit
+          fuga inventore eveniet culpa quasi hic dolor est, eius exercitationem nisi placeat facere voluptates optio sequi
+          veritatis. Eaque, rerum!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus hic at iusto odit quam quis id laborum
+          quaerat, commodi fugiat.</p>
+      </div>
+    </div>
+  </section>
+
+  <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_footer.html') %>
+
+  <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_helper.html') %>
+
+</body>
+
+</html>

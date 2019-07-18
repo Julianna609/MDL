@@ -104,5 +104,16 @@ import { log } from './utils';
         window.Cookies.set('exit', 1, { expires: 1 });
       }
     });
+
+    // tabs behaviour
+    $('ul.tabs li').click(function () {
+      var tabId = $(this).attr('data-tab');
+
+      $('ul.tabs li').removeClass('current');
+      $('.tab-content').removeClass('current');
+
+      $(this).addClass('current');
+      $('#' + tabId).addClass('current');
+    });
   });
 })(window.jQuery);
