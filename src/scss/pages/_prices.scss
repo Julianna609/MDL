@@ -2,6 +2,10 @@
   padding: 30px 0;
   position: relative;
   z-index: 1;
+  
+  @include bp (md){
+    min-height: 320px;
+  }
 
   &:after{
     content: '';
@@ -16,6 +20,13 @@
 
   &.price{
     background-image: url('../../images/prices/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &.blog{
+    background-image: url('../../images/blog/main-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

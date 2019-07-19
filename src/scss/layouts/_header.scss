@@ -19,6 +19,9 @@
 
 .header__logo-wrapper{
   padding-right: 10px;
+  @include bp (xxs){
+    width: 50%;
+  }
   img{
     object-fit: contain;
     width: 100px;
