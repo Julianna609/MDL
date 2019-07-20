@@ -20,6 +20,8 @@ import { log } from './utils';
 
     let Popup = window.Popup;
     new Popup();
+    let Form = window.Form;
+    new Form();
 
     // burger menu opening
     $('.js-burger-menu').click(function () {
@@ -133,5 +135,34 @@ import { log } from './utils';
       });
     };
     initBlogDescription();
+
+    function footerMobileAccordion () {
+      if ($(window).width() < 768) {
+        $('.footer__title').click(function () {
+          $(this)
+            .next('.footer__nav')
+            .slideToggle();
+        });
+      }
+    }
+    footerMobileAccordion();
+
+    // home page blog`s samples description
+
+    const initBlogSampleDescription = () => {
+      const showChar = 234; // How many characters are shown by default
+      $('.blog-grid__item .description').each(function () {
+        const content = $(this).html();
+
+        if (content.length > showChar) {
+          const c = content.substr(0, showChar);
+
+          const html = `${c} . . .`;
+
+          $(this).html(html);
+        }
+      });
+    };
+    initBlogSampleDescription();
   });
 })(window.jQuery);

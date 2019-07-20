@@ -7,6 +7,7 @@ import jQuery from 'jquery';
 import 'slick-carousel';
 import Cookies from 'js-cookie';
 import 'magnific-popup';
+const Form = require('../../moduls/forms/index');
 
 window.Popup = function () {
   jQuery('.popup-btn').each(function (index, obj) {
@@ -34,9 +35,9 @@ window.Popup = function () {
     $this.magnificPopup(settings);
   });
 };
-// export default Popup;
 
 // Allow to use jQuery in a global scope
 /* global */
 window.jQuery = jQuery;
 window.Cookies = Cookies;
+window.Form = Form;

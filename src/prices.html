@@ -33,7 +33,9 @@
              сможете получить более выгодную и точную цену</p>
        </div>
 
-       <div class="main-form__wrapper">
+        <%= require('html-loader?root=.&minimize=true&interpolate!./partials/_main-form.html') %>
+
+       <!-- <div class="main-form__wrapper">
          <form action="" class="main-form">
            <p class="title">Опишите вашу задачу</p>
            <p class="subtitle">и получите просчет стоимости объекта</p>
@@ -70,7 +72,7 @@
              </ul>
            </div>
          </form>
-       </div>
+       </div> -->
      </div>
    </section>
 

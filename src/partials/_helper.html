@@ -1,9 +1,19 @@
 <div class="helper">
   <div class="container">
-    <form class="helper-form">
+    <form class="helper-form pbz_form clear-styles"
+      data-error-title="Ошибка отправки!"
+      data-error-message="Попробуйте отправить заявку через некоторое время."
+      data-success-title="Спасибо за заявку!"
+      data-success-message="Наш менеджер свяжется с вами в ближайшее время.">
       <p>Мы поможем с Вашим проектом!</p>
-      <input type="text" class="input" placeholder="Телефон">
-      <input type="text" class="input" placeholder="Что нужно сделать?">
+      <input class="input" 
+       placeholder="Телефон"
+       type="tel" name="phone"
+       data-title="Телефон" data-validate-required="Обязательное поле"
+       data-validate-uaphone="Неправильный номер">
+      <input type="text"
+       class="input" 
+       placeholder="Что нужно сделать?">
       <button type="submit" class="form-button">получить консультацию</button>
     </form>
   </div>
