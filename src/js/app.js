@@ -115,5 +115,23 @@ import { log } from './utils';
       $(this).addClass('current');
       $('#' + tabId).addClass('current');
     });
+
+    // blog page description
+
+    const initBlogDescription = () => {
+      const showChar = 324; // How many characters are shown by default
+      $('.js-blog-description').each(function () {
+        const content = $(this).html();
+
+        if (content.length > showChar) {
+          const c = content.substr(0, showChar);
+
+          const html = `${c} . . .`;
+
+          $(this).html(html);
+        }
+      });
+    };
+    initBlogDescription();
   });
 })(window.jQuery);

@@ -1,0 +1,43 @@
+.pagination{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 20px 0; 
+  @include bp (md){
+    padding: 40px 0;
+  }
+  li{
+    width: 35px;
+    height: 35px;
+    border: 1px solid $light-grey;
+    background: transparent;
+    font-weight: 300;
+    font-size: 14px;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 10px;
+    &.active{
+      border-color: $yellow;
+    }
+    &:hover{
+      border-color: $yellow;
+    }
+    a{
+      display: block;
+      width: 35px;
+      height: 35px;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 14px;
+      color: $dark;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
